@@ -11,19 +11,16 @@ var license = "";
 const mitLicense = {
     name: "MIT",
     icon: "[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)",
-    descr: "This is the description of the MIT license.",
 }
 
 const mozilla20License = {
     name: "Mozilla",
     icon: "[![License: MPL 2.0](https://img.shields.io/badge/License-MPL_2.0-brightgreen.svg)](https://opensource.org/licenses/MPL-2.0)",
-    descr: "This is the description of the Mozilla license.",
 }
 
 const odblLicense = {
     name: "ODbl",
     icon: "[![License: ODbL](https://img.shields.io/badge/License-ODbL-brightgreen.svg)](https://opendatacommons.org/licenses/odbl/)",
-    descr: "This is the ODbl license.",
 }
 
 
@@ -65,7 +62,7 @@ inquirer
             type: 'list',
             message: 'Choose a license for the application:',
             name: 'license',
-            choices: [mitLicense.name, mozilla20License.name, odblLicense.name, 'D'],
+            choices: [mitLicense.name, mozilla20License.name, odblLicense.name],
         },
         {
             type: 'input',
@@ -86,22 +83,28 @@ inquirer
     .then((response) => {
 
         // Set license variables based on selection
-        if (response.choices = mitLicense.name) {
-            icon = mitLicense.icon;
-            license = mitLicense.descr;
-        } else if (response.choices = mozilla20License.name) {
-            icon = mozilla20License.icon;
-            license = mozilla20License.descr;
-        } else {
-            icon = odblLicense.icon;
-            license = odblLicense.descr;
-        };
-
+        switch (response.license) {
+            case mitLicense.name:
+                icon = mitLicense.icon;
+                license = mitLicense.name;
+                break;
+            case mozilla20License.name:
+                icon = mozilla20License.icon;
+                license = mozilla20License.name;
+                break;
+            case odblLicense.name:
+                icon = odblLicense.icon;
+                license = odblLicense.name;
+                break;
+            default:
+                icon = "NA";
+                license = "NA";
+        }
 
         // Define variable for adding content and formatting to README file.
-        let contentsReadMe = "# Title: " + response.title + icon + "\n\n## Description\n" + response.description + "\n\n## Table of Contents\n\n[Installation](#installation)<br>[Usage](#usage)<br>[Contributing](#contributing)<br>[Tests](#tests)  [License](#license)<br>[Questions](#questions)\n\n### Installation\n\n" + response.install + "\n\n### Usage\n\n" + response.usage + "\n\n### Contributing\n\n" + response.contribution + "\n\n### Tests\n\n" + response.test + "\n\n### License\n\n" + license + "\n\n### Questions\n\n" + "> * GitHub Username: " + response.gitHubUserName + "\n\n" + "> * GitHub Profile: https://github.com/" + response.gitHubUserName + "\n\n> * Email: " + response.email + "\n\n> * Contact Instructions: " + response.contact + "\n\n";
+        let contentsReadMe = `# Title: ${response.title} ${icon}\n\n## Description\n ${response.description}\n\n## Table of Contents\n\n[Installation](#installation)<br>[Usage](#usage)<br>[Contributing](#contributing)<br>[Tests](#tests)  [License](#license)<br>[Questions](#questions)\n\n### Installation\n\n${response.install}\n\n### Usage\n\n${response.usage}\n\n### Contributing\n\n${response.contribution}\n\n### Tests\n\n${response.test}\n\n### License\n\nThis application is covered under the ${license} ${icon} license.\n\n### Questions\n\n> * GitHub Username: ${response.gitHubUserName}\n\n> * GitHub Profile: https://github.com/${response.gitHubUserName}\n\n> * Email: ${response.email}\n\n> * Contact Instructions: ${response.contact}\n\n`;
 
         // Generate Readme file
-        fs.appendFile('Generated_README.md', contentsReadMe, (err) => err ? console.error(err) : console.log('README for project' + response.title + 'created successfully!'));
+        fs.appendFile('Generated_README.md', contentsReadMe, (err) => err ? console.error(err) : console.log('README for project ' + response.title + ' created successfully!'));
     }
     );
