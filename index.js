@@ -64,6 +64,56 @@ const ccbyncnd40License = {
     icon: "[![License: CC BY-NC-ND 4.0](https://img.shields.io/badge/License-CC_BY--NC--ND_4.0-lightgrey.svg)](https://creativecommons.org/licenses/by-nc-nd/4.0/)",
 }
 
+const epl10License = {
+    name: "Eclipse Public License 1.0",
+    icon: "[![License](https://img.shields.io/badge/License-EPL_1.0-red.svg)](https://opensource.org/licenses/EPL-1.0)",
+}
+
+const gplv3License = {
+    name: "GNU GPL v3",
+    icon: "[![License: GPL v3](https://img.shields.io/badge/License-GPLv3-blue.svg)](https://www.gnu.org/licenses/gpl-3.0)",
+}
+
+const gplv2License = {
+    name: "GNU GPL v2",
+    icon: "[![License: GPL v2](https://img.shields.io/badge/License-GPL_v2-blue.svg)](https://www.gnu.org/licenses/old-licenses/gpl-2.0.en.html)",
+}
+
+const agplv3License = {
+    name: "GNU AGPL v3",
+    icon: "[![License: AGPL v3](https://img.shields.io/badge/License-AGPL_v3-blue.svg)](https://www.gnu.org/licenses/agpl-3.0)",
+}
+
+const lgplv3License = {
+    name: "GNU LGPL v3",
+    icon: "[![License: LGPL v3](https://img.shields.io/badge/License-LGPL_v3-blue.svg)](https://www.gnu.org/licenses/lgpl-3.0)",
+}
+
+const fdlv13License = {
+    name: "GNU FDL v1.3",
+    icon: "[![License: FDL 1.3](https://img.shields.io/badge/License-FDL_v1.3-blue.svg)](https://www.gnu.org/licenses/fdl-1.3)",
+}
+
+const hippo21License = {
+    name: "Hippocratic 2.1",
+    icon: "(https://img.shields.io/badge/License-Hippocratic_2.1-lightgrey.svg)](https://firstdonoharm.dev)",
+}
+
+const hippo30License = {
+    name: "Hippocratic 3.0",
+    icon: "(https://img.shields.io/badge/License-Hippocratic_3.0-lightgrey.svg)](https://firstdonoharm.dev)",
+}
+
+const ibmPub10License = {
+    name: "IBM Public Version 1.0",
+    icon: "[![License: IPL 1.0](https://img.shields.io/badge/License-IPL_1.0-blue.svg)](https://opensource.org/licenses/IPL-1.0)",
+}
+
+const iscLicense = {
+    name: "ISC",
+    icon: "[![License: ISC](https://img.shields.io/badge/License-ISC-blue.svg)](https://opensource.org/licenses/ISC)",
+}
+
 const mitLicense = {
     name: "MIT",
     icon: "[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)",
@@ -74,12 +124,45 @@ const mozilla20License = {
     icon: "[![License: MPL 2.0](https://img.shields.io/badge/License-MPL_2.0-brightgreen.svg)](https://opensource.org/licenses/MPL-2.0)",
 }
 
-const odblLicense = {
-    name: "ODbl",
+const odcattbyLicense = {
+    name: "Open Data Commons Attribution (BY)",
+    icon: "[![License: Open Data Commons Attribution](https://img.shields.io/badge/License-ODC_BY-brightgreen.svg)](https://opendatacommons.org/licenses/by/)",
+}
+
+const odcODblLicense = {
+    name: "Open Data Commons Open Database (ODbl)",
     icon: "[![License: ODbL](https://img.shields.io/badge/License-ODbL-brightgreen.svg)](https://opendatacommons.org/licenses/odbl/)",
 }
 
+const odcPDDLLicense = {
+    name: "Open Data Commons Public Domain Dedication and License (PDDL)",
+    icon: "[![License: ODbL](https://img.shields.io/badge/License-PDDL-brightgreen.svg)](https://opendatacommons.org/licenses/pddl/)",
+}
 
+const perlLicense = {
+    name: "Perl",
+    icon: "[![License: Artistic-2.0](https://img.shields.io/badge/License-Perl-0298c3.svg)](https://opensource.org/licenses/Artistic-2.0)",
+}
+
+const art20License = {
+    name: "Artistic 2.0",
+    icon: "[![License: Artistic-2.0](https://img.shields.io/badge/License-Artistic_2.0-0298c3.svg)](https://opensource.org/licenses/Artistic-2.0)",
+}
+
+const silOpenFont11License = {
+    name: "SIL Open Font 1.1",
+    icon: "[![License: Open Font-1.1](https://img.shields.io/badge/License-OFL_1.1-lightgreen.svg)](https://opensource.org/licenses/OFL-1.1)",
+}
+
+const unLicense = {
+    name: "Unlicense",
+    icon: "[![License: Unlicense](https://img.shields.io/badge/license-Unlicense-blue.svg)](http://unlicense.org/)",
+}
+
+const zlibLicense = {
+    name: "zlib/libpng",
+    icon: "[![License: Zlib](https://img.shields.io/badge/License-Zlib-lightgrey.svg)](https://opensource.org/licenses/Zlib)",
+}
 
 // Inquirer prompts. The 'key' is the 'name' property. The 'value' is the string value entered by the user.
 inquirer
@@ -130,9 +213,26 @@ inquirer
                 ccbynd40License.name,
                 ccbyncsa40License.name,
                 ccbyncnd40License.name,
+                epl10License.name,
+                gplv3License.name,
+                gplv2License.name,
+                agplv3License.name,
+                lgplv3License.name,
+                fdlv13License.name,
+                hippo21License.name,
+                hippo30License.name,
+                ibmPub10License.name,
+                iscLicense.name,
                 mitLicense.name,
                 mozilla20License.name,
-                odblLicense.name
+                odcattbyLicense.name,
+                odcODblLicense.name,
+                odcPDDLLicense.name,
+                perlLicense.name,
+                art20License.name,
+                silOpenFont11License.name,
+                unLicense.name,
+                zlibLicense.name
             ],
         },
         {
@@ -199,6 +299,46 @@ inquirer
                 icon = ccbyncnd40License.icon;
                 license = ccbyncnd40License.name;
                 break;
+            case epl10License.name:
+                icon = epl10License.icon;
+                license = epl10License.name;
+                break;
+            case gplv3License.name:
+                icon = gplv3License.icon;
+                license = gplv3License.name;
+                break;
+            case gplv2License.name:
+                icon = gplv2License.icon;
+                license = gplv2License.name;
+                break;
+            case agplv3License.name:
+                icon = agplv3License.icon;
+                license = agplv3License.name;
+                break;
+            case lgplv3License.name:
+                icon = lgplv3License.icon;
+                license = lgplv3License.name;
+                break;
+            case fdlv13License.name:
+                icon = fdlv13License.icon;
+                license = fdlv13License.name;
+                break;
+            case hippo21License.name:
+                icon = hippo21License.icon;
+                license = hippo21License.name;
+                break;
+            case hippo30License.name:
+                icon = hippo30License.icon;
+                license = hippo30License.name;
+                break;
+            case ibmPub10License.name:
+                icon = ibmPub10License.icon;
+                license = ibmPub10License.name;
+                break;
+            case iscLicense.name:
+                icon = iscLicense.icon;
+                license = iscLicense.name;
+                break;
             case mitLicense.name:
                 icon = mitLicense.icon;
                 license = mitLicense.name;
@@ -207,9 +347,37 @@ inquirer
                 icon = mozilla20License.icon;
                 license = mozilla20License.name;
                 break;
-            case odblLicense.name:
-                icon = odblLicense.icon;
-                license = odblLicense.name;
+            case odcattbyLicense.name:
+                icon = odcattbyLicense.icon;
+                license = odcattbyLicense.name;
+                break;
+            case odcODblLicense.name:
+                icon = odcODblLicense.icon;
+                license = odcODblLicense.name;
+                break;
+            case odcPDDLLicense.name:
+                icon = odcPDDLLicense.icon;
+                license = odcPDDLLicense.name;
+                break;
+            case perlLicense.name:
+                icon = perlLicense.icon;
+                license = perlLicense.name;
+                break;
+            case art20License.name:
+                icon = art20License.icon;
+                license = art20License.name;
+                break;
+            case silOpenFont11License.name:
+                icon = silOpenFont11License.icon;
+                license = silOpenFont11License.name;
+                break;
+            case unLicense.name:
+                icon = unLicense.icon;
+                license = unLicense.name;
+                break;
+            case zlibLicense.name:
+                icon = zlibLicense.icon;
+                license = zlibLicense.name;
                 break;
             default:
                 icon = "NA";
