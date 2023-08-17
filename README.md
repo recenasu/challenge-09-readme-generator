@@ -45,32 +45,43 @@ SO THAT I can quickly create a professional README for a new project
 
 ## Installation
 
-> * To launch the webpage, open the browser and paste the following URL in the address bar: https://recenasu.github.io/06-Weather-Dashboard-Project/
-> * To access the project repo, open the browser and paste the following URL in the address bar: https://github.com/recenasu/06-Weather-Dashboard-Project
+> * To watch a video showing the application in use, open the browser and paste the following URL in the address bar, or click on the link: https://watch.screencastify.com/v/HXB8oVZTsVir3jtjNJGG
+> * To access the project repo, open the browser and paste the following URL in the address bar, or click on the link: https://github.com/recenasu/challenge-09-readme-generator
 
 ## Usage
 
-> * Navigate to the webpage. The webpage displays the current weather and forecast for Timbuktu, by default. Enter a city name in the field provided and click "Get Weather". The current weather and forecast for that city is displayed (AC01) (AC02) (AC03).
+> * From VSCode, open a terminal window
+> * Navigate to the project root directory using bash
+> * Type 'node index.js'
+> * Press Enter
+> * Answer each prompt by typing your answer or selecting an option from the menu, when applicable 
+> * After answering the final prompt, wait for the message that the README file has been successfully created (AC01)
+> * Open the newly created "Generated_README.md" file in the project root directory
+> * Note the project title at the top of the page (AC02)
+> * Note the license badge near the project title (AC04)
+> * Scroll to view content, or navigate using the Table of Contents links (AC03) (AC04) (AC07) 
+> * In the Questions section, note the GitHub username, repo location, email, and contact instructions (AC05) (AC06)
 
-> * Enter a different city and click "Get Weather". Note that the search history contains the previous searches. Click on a previous city name to display that city's weather information. (AC04)
 
 
 The following images show the application sequence.
 
-![Initial page](./assets/imgs/weather1.png)
-
-
-![City search and weather displayed](./assets/imgs/weather2.png)
-
-![City selected from search history](./assets/imgs/weather3.png)
-
+> * Initial prompts
+![Exhibit 1](./assets/Screen1.png)
+> * License selection menu/list
+![Exhibit 2](./assets/Screen2.png)
+> * README file creation success message
+![Exhibit 3](./assets/Screen3.png)
+> * README file top
+![Exhibit 4](./assets/Screen4.png)
+> * README file middle
+![Exhibit 5](./assets/Screen5.png)
+> * README file bottom
+![Exhibit 6](./assets/Screen6.png)
 
 
 
 ## Credits
 
-N/A
+npm Inquirer v8.2.6 module was used for the user prompt functionality.
 
-
-
-https://watch.screencastify.com/v/HXB8oVZTsVir3jtjNJGG
